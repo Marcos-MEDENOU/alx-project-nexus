@@ -33,9 +33,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'rest_framework',
     'corsheaders',
     'django_extensions',
+    'cloudinary',
+    'cloudinary_storage',
+    'rest_framework',
+    'knox',
+    'drf_yasg',
+    # 'products',
+    'users',
+    # 'orders',
+    # 'payments',
 ]
 
 MIDDLEWARE = [
