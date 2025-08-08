@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('NEXUS_SECRET_KEY')
 
-
+# INSTALLED_APPS
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,12 +40,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'knox',
     'drf_yasg',
-    # 'products',
+    'products',
     'users',
-    # 'orders',
+    'orders',
     # 'payments',
 ]
 
+# MIDDLEWARE
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

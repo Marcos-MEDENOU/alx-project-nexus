@@ -17,11 +17,9 @@ from .models import User
 
 logger = logging.getLogger(__name__)
 
-# Throttling
 class ResendVerificationThrottle(AnonRateThrottle):
     scope = 'resend_verification'
 
-# User registration
 class UserRegistrationAPIView(generics.GenericAPIView):
     serializer_class = UserRegistrationSerializer
     permission_classes = [permissions.AllowAny]
@@ -39,7 +37,7 @@ class UserRegistrationAPIView(generics.GenericAPIView):
             "message": "User created successfully. Please verify your email."
         }, status=status.HTTP_201_CREATED)
 
-# User login
+
 class UserLoginAPIView(generics.GenericAPIView):
     serializer_class = UserLoginSerializer
     permission_classes = [permissions.AllowAny]
@@ -57,7 +55,7 @@ class UserLoginAPIView(generics.GenericAPIView):
             "message": "Login successful"
         })
 
-# Logout from current device
+
 class UserLogoutAPIView(generics.GenericAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
@@ -68,7 +66,6 @@ class UserLogoutAPIView(generics.GenericAPIView):
         }, status=status.HTTP_200_OK)
 
 
-# Logout from all devices
 class UserLogoutAllAPIView(generics.GenericAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
@@ -78,7 +75,7 @@ class UserLogoutAllAPIView(generics.GenericAPIView):
             "message": "Successfully logged out from all devices"
         }, status=status.HTTP_200_OK)
 
-# User profile
+
 class UserProfileAPIView(generics.RetrieveUpdateAPIView):
     serializer_class = ProfileSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -94,7 +91,6 @@ class UserProfileAPIView(generics.RetrieveUpdateAPIView):
             instance.profile_picture.delete(save=True)
 
 
-# User details
 class UserAPIView(generics.RetrieveAPIView):
     serializer_class = UserSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -104,7 +100,7 @@ class UserAPIView(generics.RetrieveAPIView):
     
 
 
-# Email verification
+
 class EmailVerificationAPIView(generics.GenericAPIView):
     permission_classes = [AllowAny]
 
@@ -136,7 +132,7 @@ class EmailVerificationAPIView(generics.GenericAPIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
-# Resend verification email
+
 class ResendVerificationEmailAPIView(generics.GenericAPIView):
     permission_classes = [permissions.IsAuthenticated]
     throttle_classes = [ResendVerificationThrottle]

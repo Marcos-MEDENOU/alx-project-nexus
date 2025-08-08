@@ -35,13 +35,11 @@ class EmailVerification:
             subject = 'Verify your email address'
             html_message = render_to_string('emails/verification_email.html', context)
             plain_message = strip_tags(html_message)
-            
-            print(settings.DEFAULT_FROM_EMAIL)
 
             email = EmailMultiAlternatives(
                 subject=subject,
                 body=plain_message,
-                from_email=settings.DEFAULT_FROM_EMAIL, 
+                from_email=settings.DEFAULT_FROM_EMAIL,
                 to=[user.email],
                 reply_to=[settings.REPLY_TO_EMAIL],
             )
