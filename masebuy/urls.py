@@ -27,9 +27,9 @@ from drf_yasg import openapi
 from rest_framework import permissions
 schema_view = get_schema_view(
     openapi.Info(
-        title="masebuy API",
+        title="Scalable E-Commerce API",
         default_version='v1',
-        description="masebuy API documentation",
+        description="Scalable E-Commerce API documentation",
         terms_of_service="https://www.masebuy.com/terms/",
         contact=openapi.Contact(email="contact@masebuy.com"),
         license=openapi.License(name="MIT License"),
