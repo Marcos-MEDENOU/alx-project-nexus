@@ -4,6 +4,7 @@ import cloudinary
 
 DEBUG = True
 
+
 ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['.vercel.app']
 
