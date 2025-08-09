@@ -10,4 +10,5 @@ drf-yasg==1.21.10
 pillow==11.3.0
 psycopg2-binary==2.9.10
 django-phonenumber-field==8.1.0
+phonenumbers==8.12.50
 whitenoise==6.9.0
