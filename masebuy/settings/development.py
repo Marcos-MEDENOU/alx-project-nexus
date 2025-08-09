@@ -13,28 +13,34 @@ import sys
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-if 'test' in sys.argv:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': ':memory:',
-        }
+# if 'test' in sys.argv:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': ':memory:',
+#         }
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': config('DATABASE_NAME'),
+#             'USER': config('DATABASE_USER'),
+#             'PASSWORD': config('DATABASE_PASSWORD'),
+#             'HOST': config('DATABASE_HOST'),
+#             'PORT': config('DATABASE_PORT'),
+#             'CONN_MAX_AGE': 600,  # Keep the connection open for 10 minutes
+#             'OPTIONS': {
+#                 'sslmode': 'prefer',  # Use SSL if available',
+#             }
+#         }
+#     }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',  # fichier local dans ton projet
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': config('DATABASE_NAME'),
-            'USER': config('DATABASE_USER'),
-            'PASSWORD': config('DATABASE_PASSWORD'),
-            'HOST': config('DATABASE_HOST'),
-            'PORT': config('DATABASE_PORT'),
-            'CONN_MAX_AGE': 600,  # Keep the connection open for 10 minutes
-            'OPTIONS': {
-                'sslmode': 'prefer',  # Use SSL if available',
-            }
-        }
-    }
+}
 
 TEST = {
     'NAME': config('TEST_DATABASE_NAME'),  # Use an existing database
