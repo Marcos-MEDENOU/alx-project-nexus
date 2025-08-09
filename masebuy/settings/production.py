@@ -8,21 +8,33 @@ DEBUG = True
 ALLOWED_HOSTS = ['.vercel.app']
 
 # Database configuration remains the same
+import dj_database_url
+from decouple import config
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DATABASE_NAME'),
-        'USER': config('DATABASE_USER'),
-        'PASSWORD': config('DATABASE_PASSWORD'),
-        'HOST': config('DATABASE_HOST'),
-        'PORT': config('DATABASE_PORT'),
-        'CONN_MAX_AGE': 600,
-        'OPTIONS': {
-            'sslmode': 'require',
-            'client_encoding': 'UTF8',
-        }
-    }
+    'default': dj_database_url.parse(
+        config('DATABASE_URL'),  # C’est ici que tu mets ton URL complète
+        conn_max_age=600,
+        ssl_require=True,
+        engine='django.db.backends.postgresql'
+    )
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': config('POSTGRES_DATABASE'),
+#         'USER': config('POSTGRES_USER'),
+#         'PASSWORD': config('POSTGRES_PASSWORD'),
+#         'HOST': config('POSTGRES_HOST'),
+#         'PORT': config('POSTGRES_PORT'),
+#         'CONN_MAX_AGE': 600,
+#         'OPTIONS': {
+#             'sslmode': 'require',
+#             'client_encoding': 'UTF8',
+#         }
+#     }
+# }
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
