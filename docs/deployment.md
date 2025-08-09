@@ -6,7 +6,7 @@
 
 ```bash
 # 1. Clone production branch
-git clone -b production https://github.com/snipher-marube/alx-project-nexus.git
+git clone -b production https://github.com/Marcos-MEDENOU/alx-project-nexus.git
 cd alx-project-nexus
 
 # 2. Set up production environment

@@ -7,11 +7,11 @@
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://python.org)
 [![Django](https://img.shields.io/badge/django-4.0%2B-success.svg)](https://djangoproject.com)
 [![Docker](https://img.shields.io/badge/docker-ready-2496ED.svg)](https://docker.com)
-![Postman Tests](https://github.com/snipher-marube/alx-project-nexus/workflows/Postman%20API%20Tests/badge.svg)
-[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/snipher-marube/alx-project-nexus/actions)
+![Postman Tests](https://github.com/Marcos-MEDENOU/alx-project-nexus/workflows/Postman%20API%20Tests/badge.svg)
+[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/Marcos-MEDENOU/alx-project-nexus/actions)
 [![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen.svg)](https://codecov.io)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/snipher-marube/alx-project-nexus/releases)
+[![Release](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/Marcos-MEDENOU/alx-project-nexus/releases)
 
 **A modern, cloud-ready backend API for e-commerce — built with Django REST Framework.**
 

@@ -4,7 +4,7 @@ For development without Docker:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/snipher-marube/alx-project-nexus.git
+   git clone https://github.com/Marcos-MEDENOU/alx-project-nexus.git
    cd alx-project-nexus
    ```
 
