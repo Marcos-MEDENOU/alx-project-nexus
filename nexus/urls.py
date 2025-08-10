@@ -42,11 +42,11 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('', RedirectView.as_view(url='swagger/')),
     path('admin/', admin.site.urls),
-    path('api/v1/auth/', include('users.urls')),
-    path('api/v1/auth/', include('knox.urls')),
-    path('api/v1/', include('products.urls')),
-    path('api/v1/', include('orders.urls')),
-    path('api/v1/', include('payments.urls')),
+    path('nexus_api/v1/auth/', include('users.urls')),
+    path('nexus_api/v1/auth/', include('knox.urls')),
+    path('nexus_api/v1/', include('products.urls')),
+    path('nexus_api/v1/', include('orders.urls')),
+    path('nexus_api/v1/', include('payments.urls')),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]

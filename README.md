@@ -126,15 +126,6 @@ python manage.py runserver
 # Access the API documentation at http://localhost:8000/swagger/
 ```
 
-## 📚 Documentation
-
-This README provides a high-level overview and quick start guide. For more detailed documentation, please refer to the project wiki:
-
-- **[Platform Blueprint](docs/architecture.md)**
-- **[Endpoint Specifications](docs/api-documentation.md)**
-- **[Test Procedures](docs/testing.md)**
-- **[Deployment Guide](docs/deployment.md)**
-- **[Contributing Guide](docs/contributing.md)**
 
 ## 🤝 Contributing
 
