@@ -1,5 +1,5 @@
 """
-WSGI config for masebuy project.
+WSGI config for nexus project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -12,7 +12,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 from whitenoise import WhiteNoise
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'masebuy.settings.production')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'nexus.settings.production')
 
 application = get_wsgi_application()
 

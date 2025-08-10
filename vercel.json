@@ -3,7 +3,7 @@
 
   "builds": [
     {
-      "src": "masebuy/wsgi.py",
+      "src": "nexus/wsgi.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "15mb",
@@ -21,7 +21,7 @@
     {
 
       "src": "/(.*)",
-      "dest": "/masebuy/wsgi.py"
+      "dest": "/nexus/wsgi.py"
     },
     {
       "src": "/static/(.*)",

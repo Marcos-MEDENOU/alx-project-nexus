@@ -1,5 +1,5 @@
 """
-URL configuration for masebuy project.
+URL configuration for nexus project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -30,8 +30,8 @@ schema_view = get_schema_view(
         title="Scalable E-Commerce API",
         default_version='v1',
         description="Scalable E-Commerce API documentation",
-        terms_of_service="https://www.masebuy.com/terms/",
-        contact=openapi.Contact(email="contact@masebuy.com"),
+        terms_of_service="https://www.nexus.com/terms/",
+        contact=openapi.Contact(email="contact@nexus.com"),
         license=openapi.License(name="MIT License"),
     ),
     public=True,
