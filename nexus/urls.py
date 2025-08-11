@@ -30,8 +30,6 @@ schema_view = get_schema_view(
         title="Scalable E-Commerce API",
         default_version='v1',
         description="Scalable E-Commerce API documentation",
-        terms_of_service="https://www.nexus.com/terms/",
-        contact=openapi.Contact(email="contact@nexus.com"),
         license=openapi.License(name="MIT License"),
     ),
     public=True,

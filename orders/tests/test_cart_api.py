@@ -14,22 +14,22 @@ class CartAPITest(APITestCase):
 
     def setUp(self):
         self.user = User.objects.create_user(
-            email='testuser@example.com',
+            email='nexususer@example.com',
             password='password123'
         )
         self.client.force_authenticate(user=self.user)
 
         self.category = Category.objects.create(name='Electronics', slug='electronics')
         self.product = Product.objects.create(
-            name='Laptop',
+            name='Nexus Phone',
             category=self.category,
             price=Decimal('1200.00'),
             stock_quantity=10
         )
         self.variant = ProductVariant.objects.create(
             product=self.product,
-            name='16GB RAM',
-            price=Decimal('1300.00'),
+            name='4GB RAM',
+            price=Decimal('400'),
             stock_quantity=5
         )
         self.cart = Cart.objects.create(user=self.user)
@@ -58,7 +58,7 @@ class CartAPITest(APITestCase):
 
     def test_update_cart_item(self):
         item = CartItem.objects.create(cart=self.cart, product=self.product, quantity=1)
-        url = reverse('cart-item-detail', args=[item.pk])
+        url = reverse('cart-item-detail', args=[item.pk]) 
         data = {'quantity': 3}
         response = self.client.put(url, data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)

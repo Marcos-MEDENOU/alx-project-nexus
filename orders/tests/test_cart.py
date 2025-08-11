@@ -14,20 +14,20 @@ class CartModelTest(TestCase):
 
     def setUp(self):
         self.user = User.objects.create_user(
-            email='testuser@example.com',
-            password='password123'
+            email='nexususer@example.com',
+            password='azerty123'
         )
         self.category = Category.objects.create(name='Electronics', slug='electronics')
         self.product = Product.objects.create(
-            name='Laptop',
+            name='Nexus Phone',
             category=self.category,
             price=Decimal('1200.00'),
             stock_quantity=10
         )
         self.variant = ProductVariant.objects.create(
             product=self.product,
-            name='16GB RAM',
-            price=Decimal('1300.00'),
+            name='4GB RAM',
+            price=Decimal('400'),
             stock_quantity=5
         )
         self.cart = Cart.objects.create(user=self.user)
