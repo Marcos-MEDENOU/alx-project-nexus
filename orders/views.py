@@ -11,8 +11,6 @@ from django.utils.translation import gettext as _
 import logging
 
 from payments.models import Payment
-from payments.mpesa_utils import initiate_stk_push
-from decouple import config
 from .models import (
     Order, OrderItem, ShippingAddress, BillingAddress,
     Cart, CartItem

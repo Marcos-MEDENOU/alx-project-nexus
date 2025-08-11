@@ -13,15 +13,10 @@ class Payment(models.Model):
         CREDIT_CARD = 'credit_card', _('Credit Card')
         PAYPAL = 'paypal', _('PayPal')
         BANK_TRANSFER = 'bank_transfer', _('Bank Transfer')
-        MPESA = 'mpesa', _('M-Pesa')
 
     class PaymentStatus(models.TextChoices):
         PENDING = 'pending', _('Pending')
-        AUTHORIZED = 'authorized', _('Authorized')
         PAID = 'paid', _('Paid')
-        PARTIALLY_REFUNDED = 'partially_refunded', _('Partially Refunded')
-        REFUNDED = 'refunded', _('Refunded')
-        VOIDED = 'voided', _('Voided')
         FAILED = 'failed', _('Failed')
 
     order = models.ForeignKey(
@@ -29,18 +24,6 @@ class Payment(models.Model):
         on_delete=models.CASCADE,
         related_name='payments',
         verbose_name=_('order')
-    )
-    phone_number = models.CharField(
-        _('phone number'),
-        max_length=20,
-        blank=True,
-        null=True
-    )
-    mpesa_request_id = models.CharField(
-        _('M-Pesa request ID'),
-        max_length=100,
-        blank=True,
-        null=True
     )
     transaction_id = models.CharField(
         _('transaction ID'),
